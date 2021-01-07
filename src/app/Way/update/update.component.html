@@ -1,0 +1,39 @@
+<div class="background">
+    <div class="card">
+        <div class="card-header">
+            <h3>Edit Way</h3>
+        </div> 
+        <div *ngIf="wayData" class="card-body">
+            <form action="">                                
+                <div class="form-group">
+                    <label for="" class="form-label">Type of road</label>
+                    <select class="form-select"  [(ngModel)]="wayData.viaType" name="viaType">
+                        <option disabled="true" selected>select a option</option>                        
+                        <option value="Carretera Principal" >main road</option>
+                        <option value="Carretera Secundaria" >minor road</option>
+                        <option value="Autopista">highway</option>
+                    </select>
+                    <div class="form-group">
+                        <label for="" class="form-label">Road Class</label>
+                        <select class="form-select" [(ngModel)]="wayData.viaClass" name="viaClass">
+                            <option disabled="true" selected>select a option</option>                        
+                            <option value="Calle" >street</option>
+                            <option value="Carretera" >highroad</option>                           
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form-label">Number</label>
+                        <input type="number" class="form-control" placeholder="insert road number" pattern="[0-9]+" title="please enter number only" [(ngModel)]="wayData.viaNumber" name="viaNumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form-label">Level of congestion</label>
+                        <input type="number" class="form-control" placeholder="insert congestion level" pattern="[0-9]+" title="please enter number only" [(ngModel)]="wayData.viaCongestion" name="viaCongestion">
+                    </div>
+                    <button (click)="updateWay(wayData)" class="btn btn btn-primary">add</button>
+                </div>
+            </form>
+
+        </div>
+        
+    </div>
+</div>

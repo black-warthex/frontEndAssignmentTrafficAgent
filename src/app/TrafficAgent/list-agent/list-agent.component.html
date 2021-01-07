@@ -1,0 +1,42 @@
+<div class="background">
+    <div class="actions">
+        <h1>Traffic Agent</h1>
+        <h2>Welcome this section shows the crud of traffic agent.</h2>
+        <h2>do you want to add a traffic agent?<button (click)="confirmAdd()"  class="add">add</button></h2>
+    </div>
+    <div *ngIf="agents" class="tab">        
+        <table class="table table-hover table-dark caption-top">            
+            <caption>Agent List</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Code</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Surname</th>
+                    <th scope="col">Years E</th>                    
+                    <th scope="col">Code Secretary</th>
+                    <th scope="col">Code Via</th>
+                    <th scope="col">Actions</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let agent of agents" class="text-center">
+                    <td>{{agent.agentCode}}</td>
+                    <td>{{agent.agentName}}</td>
+                    <td>{{agent.agentSurname}}</td>
+                    <td>{{agent.agentYearsExperience}}</td>
+                    <td>{{agent.agentSecretaryCode}}</td>
+                    <td>{{agent.agentViaCode}}</td>
+                    <td>
+                        <button  class="btn btn-warning" (click)="updateAgent(agent)">edit</button>
+                        <button  class="btn btn-danger" (click)="confirmDelete(agent)">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>        
+<div class="wave">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #383A59;"></path></svg>
+</div>
+

@@ -1,0 +1,40 @@
+<div class="background">
+    <div class="actions">
+        <h1>WAY</h1>
+        <h2>Welcome this section shows the crud of tracks.</h2>
+        <h2>do you want to add a way?<button (click)="createWay()" class="add">add</button></h2>
+    </div>
+    <div *ngIf="roads" class="tab">        
+        <table class="table table-hover table-dark caption-top">            
+            <caption>Track List</caption>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Class</th>
+                    <th scope="col">Number</th>
+                    <th scope="col">Current Congestion</th>
+                    <th scope="col">Actions</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let way of roads" class="text-center">
+                    <td>{{way.viaId}}</td>
+                    <td>{{way.viaType}}</td>
+                    <td>{{way.viaClass}}</td>
+                    <td>{{way.viaNumber}}</td>
+                    <td>{{way.viaCongestion}} %</td>                               
+                    <td>
+                        <button (click)="updateWay(way)"  class="btn btn-warning">edit</button>
+                        <button (click)="confirmDelete(way)" class="btn btn-danger">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+</div>        
+<div class="wave">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #383A59;"></path></svg>
+</div>

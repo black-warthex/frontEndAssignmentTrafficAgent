@@ -1,0 +1,36 @@
+<div class="background">
+    <div class="actions">
+        <h1>Traffic Agent</h1>
+        <h2>Welcome this section shows the crud of traffic agent.</h2>
+        <h2>do you want to add a traffic agent?<button (click)="confirmAdd()"  class="add">add</button></h2>
+        <div class="find">
+            <form action="">
+                <span>search: </span><input type="text" [(ngModel)]="search" name="search" class="in">
+                <button (click)="findAssigment()" class="add">find</button>
+                <button (click)="showAssigment()" class="add">show all</button>
+            </form>       
+        </div> 
+    </div>
+    <div class="tab">        
+        <table class="table table-hover table-dark caption-top">            
+            <caption>Assignment List</caption>            
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Agent Code</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Route Name</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let assigment of assigments" class="text-center">
+                    <td>{{assigment.agentManagementId}}</td>
+                    <td>{{assigment.agentCode}}</td>
+                    <td>{{assigment.dateAssignment}}</td>
+                    <td>{{assigment.routeName}}</td>                                        
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>        
+

@@ -1,0 +1,34 @@
+<div class="background">
+    <div class="card">
+        <div class="card-header">
+            <h3>Add traffic agent</h3>
+        </div> 
+        <div class="card-body">
+            <form action="">                                               
+                    <div class="form-group">
+                        <label for="" class="form-label">Agent Code</label>
+                        <input type="text" class="form-control" placeholder="insert agent code" title="please enter number only" [(ngModel)]="agent.agentCode" name="agentCode">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form-label">Agent Name</label>
+                        <input type="text" class="form-control" placeholder="insert agent name"  title="please enter number only" [(ngModel)]="agent.agentName" name="agentName">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form-label">Agent Surname</label>
+                        <input type="text" class="form-control" placeholder="insert agent surname"  title="please enter number only" [(ngModel)]="agent.agentSurname" name="agentSurname">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form-label">Years of experience</label>
+                        <input type="number" class="form-control" placeholder="insert congestion level" pattern="[0-9]+" title="please enter number only" [(ngModel)]="agent.agentYearsExperience" name="agentYearsExperience">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form-label">Secretary Code</label>
+                        <input type="text" class="form-control" placeholder="insert road number" pattern="[0-9]+" title="please enter number only" [(ngModel)]="agent.agentSecretaryCode" name="agentSecretaryCode">
+                    </div>                     
+                    <button (click)="saveAgent()" class="btn btn btn-primary">add</button>                
+            </form>
+
+        </div>
+        
+    </div>
+</div>

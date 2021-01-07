@@ -1,0 +1,63 @@
+
+.background{
+    background-color: #383A59;
+    height: 73.8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+img{
+    background-color: #383A59;
+    display: block;
+    height: 450px;
+    object-fit: cover;
+    width: auto;
+}
+.wave{
+    background-color:red;
+    height: 150px; 
+    overflow: hidden;
+}
+
+.wave svg{
+    background-color: #383A59;
+    height: 100%;
+    width: 100%;
+}
+
+.text{
+    height: -50px;
+    width: 50%;
+    color: #383A59;
+    background-color: #383A59;
+}
+
+.text h2{
+    color: #C4C4C4;
+    background-color: #383A59;
+}
+.text h1{
+    font-size: 80px;
+    font-weight: 600;
+    text-decoration: none;
+    color:#BD93F9;
+    background-color: #383A59;
+}
+
+.text button{
+    display: inline-block;
+    margin-right: 30px;
+    color: #BCC2B8;    
+    background-color: #282A36;
+    border: 1px solid #BD93F9;
+    margin-top: 30px;
+    padding: 10px 30px;
+    box-shadow: 5px 5px 15px #282A36;
+    border-radius: 5px 5px;
+    font-size: 17px;
+}
+.text button:hover{
+    background-color:#BD93F9 ;
+    color: #282A36;         
+}

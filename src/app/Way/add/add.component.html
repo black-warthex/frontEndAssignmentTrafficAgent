@@ -1,0 +1,39 @@
+<div class="background">
+    <div class="card">
+        <div class="card-header">
+            <h3>add new way</h3>
+        </div> 
+        <div class="card-body">
+            <form action="">                                
+                <div class="form-group">
+                    <label for="" class="form-label">Type of road</label>
+                    <select class="form-select"  [(ngModel)]="way.viaType" name="viaType">
+                        <option selected="true" disabled="true">select a option</option>                        
+                        <option value="Carretera Principal" >main road</option>
+                        <option value="Carretera Secundaria" >minor road</option>
+                        <option value="Autopista">highway</option>
+                    </select>
+                </div>
+                    <div class="form-group ">
+                        <label for="" class="form-label">Road Class</label>
+                        <select class="form-select" [(ngModel)]="way.viaClass" name="viaClass">
+                            <option disabled="true" selected>select a option</option>                        
+                            <option value="Calle" >street</option>
+                            <option value="Carretera" >highroad</option>                           
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form-label">Number</label>
+                        <input type="number" class="form-control" placeholder="insert road number" pattern="[0-9]+" title="please enter number only" [(ngModel)]="way.viaNumber" name="viaNumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form-label">Level of congestion</label>
+                        <input type="number" class="form-control" placeholder="insert congestion level" pattern="[0-9]+" title="please enter number only" [(ngModel)]="way.viaCongestion" name="viaCongestion">
+                    </div>
+                    <button (click)="saveWay()" class="btn btn btn-primary">add</button>                
+            </form>
+
+        </div>
+        
+    </div>
+</div>

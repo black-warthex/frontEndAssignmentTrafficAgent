@@ -1,0 +1,26 @@
+<div class="background">
+    <div class="card">
+        <div class="card-header">
+            <h3>add new way</h3>
+        </div> 
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="" class="form-label">Agents</label>
+                    <select class="form-select"  [(ngModel)]="agentCode" name="agentCode">                            
+                        <option *ngFor="let agent of agents" value="{{agent['agentCode']}}">{{agent['agentCode']+' || '+agent['agentName']+' '+agent['agentSurname'] | json}}</option>                            
+                    </select>
+                </div>                                                
+                  <div class="form-group">
+                        <label for="" class="form-label">Roads</label>
+                        <select class="form-select"  [(ngModel)]="viaId" name="viaId">                            
+                            <option *ngFor="let way of roads" value="{{way['viaId']}}">{{way['viaType']+' '+way['viaClass']+' '+way['viaNumber'] | json}}</option>                            
+                        </select>
+                    </div>                   
+                    <button  (click)="saveAssignment()" class="btn btn btn-primary">add</button>                
+            </form>
+
+        </div>
+        
+    </div>
+</div>
